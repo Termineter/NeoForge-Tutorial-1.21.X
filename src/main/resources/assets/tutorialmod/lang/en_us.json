@@ -7,5 +7,7 @@
   "block.tutorialmod.bismuth_deepslate_ore": "Bismuth Deepslate Ore",
 
   "creativetab.tutorialmod.bismuth_items": "Bismuth Items",
-  "creativetab.tutorialmod.bismuth_blocks": "Bismuth Blocks"
+  "creativetab.tutorialmod.bismuth_blocks": "Bismuth Blocks",
+
+  "item.tutorialmod.chisel": "Chisel"
 }
