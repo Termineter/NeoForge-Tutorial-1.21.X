@@ -12,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.termineter.tutorialmod.TutorialMod;
+import net.termineter.tutorialmod.blocks.custom.BismuthLampBlock;
 import net.termineter.tutorialmod.blocks.custom.MagicBlock;
 import net.termineter.tutorialmod.item.ModItems;
 
@@ -59,6 +60,10 @@ public class ModBlocks {
             () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<TrapDoorBlock> BISMUTH_TRAP_DOOR = registerBlock("bismuth_trap_door",
             () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final DeferredBlock<Block> BISMUTH_LAMP = registerBlock("bismuth_lamp",
+            () -> new BismuthLampBlock(BlockBehaviour.Properties.of().strength(2f)
+                    .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BismuthLampBlock.CLICKED) ? 15 : 0)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

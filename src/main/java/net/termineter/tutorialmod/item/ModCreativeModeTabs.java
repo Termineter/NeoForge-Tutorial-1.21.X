@@ -48,6 +48,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BISMUTH_PRESSURE_PLATE);
                         output.accept(ModBlocks.BISMUTH_BUTTON);
                         output.accept(ModBlocks.BISMUTH_WALL);
+
+                        output.accept(ModBlocks.BISMUTH_LAMP);
                     })
                     .build());
 

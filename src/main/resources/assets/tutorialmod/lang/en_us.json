@@ -31,5 +31,7 @@
   "block.tutorialmod.bismuth_wall": "Bismuth Wall",
 
   "block.tutorialmod.bismuth_door": "Bismuth Door",
-  "block.tutorialmod.bismuth_trap_door": "Bismuth Trapdoor"
+  "block.tutorialmod.bismuth_trap_door": "Bismuth Trapdoor",
+
+  "block.tutorialmod.bismuth_lamp": "Bismuth Trapdoor"
 }
