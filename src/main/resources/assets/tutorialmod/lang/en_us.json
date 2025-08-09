@@ -33,5 +33,11 @@
   "block.tutorialmod.bismuth_door": "Bismuth Door",
   "block.tutorialmod.bismuth_trap_door": "Bismuth Trapdoor",
 
-  "block.tutorialmod.bismuth_lamp": "Bismuth Trapdoor"
+  "block.tutorialmod.bismuth_lamp": "Bismuth Trapdoor",
+
+  "item.tutorialmod.bismuth_sword": "Bismuth Sword",
+  "item.tutorialmod.bismuth_pickaxe": "Bismuth Pickaxe",
+  "item.tutorialmod.bismuth_shovel": "Bismuth Shovel",
+  "item.tutorialmod.bismuth_axe": "Bismuth Axe",
+  "item.tutorialmod.bismuth_hoe": "Bismuth Hoe"
 }

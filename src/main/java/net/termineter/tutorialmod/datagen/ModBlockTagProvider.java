@@ -7,6 +7,7 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.blocks.ModBlocks;
+import net.termineter.tutorialmod.util.ModTags;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
@@ -29,5 +30,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.BISMUTH_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.BISMUTH_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.BISMUTH_WALL.get());
+
+        tag(ModTags.Blocks.NEEDS_BISMUTH_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_BISMUTH_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_BISMUTH_TOOL);
     }
 }
