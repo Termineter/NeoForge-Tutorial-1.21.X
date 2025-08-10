@@ -41,5 +41,10 @@
   "item.tutorialmod.bismuth_axe": "Bismuth Axe",
   "item.tutorialmod.bismuth_hoe": "Bismuth Hoe",
 
-  "item.tutorialmod.bismuth_hammer": "Bismuth Hammer"
+  "item.tutorialmod.bismuth_hammer": "Bismuth Hammer",
+
+  "item.tutorialmod.bismuth_helmet": "Bismuth Helmet",
+  "item.tutorialmod.bismuth_chestplate": "Bismuth Chestplate",
+  "item.tutorialmod.bismuth_leggings": "Bismuth Leggings",
+  "item.tutorialmod.bismuth_boots": "Bismuth Boots"
 }
