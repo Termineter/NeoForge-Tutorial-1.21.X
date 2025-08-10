@@ -37,6 +37,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BISMUTH_HOE.get());
         handheldItem(ModItems.BISMUTH_PICKAXE.get());
         handheldItem(ModItems.BISMUTH_SHOVEL.get());
+
+        handheldItem(ModItems.BISMUTH_HAMMER.get());
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
