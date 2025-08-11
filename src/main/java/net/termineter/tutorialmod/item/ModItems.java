@@ -9,6 +9,7 @@ import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.item.custom.ChiselItem;
 import net.termineter.tutorialmod.item.custom.FuelItem;
 import net.termineter.tutorialmod.item.custom.HammerItem;
+import net.termineter.tutorialmod.item.custom.ModArmorItem;
 
 import java.util.List;
 
@@ -59,7 +60,7 @@ public class ModItems {
             new Item.Properties().attributes(HammerItem.createAttributes(ModToolTiers.BISMUTH, 7f, -3.5f))));
 
     public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.register("bismuth_helmet",
-            () -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.register("bismuth_chestplate",
             () -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
