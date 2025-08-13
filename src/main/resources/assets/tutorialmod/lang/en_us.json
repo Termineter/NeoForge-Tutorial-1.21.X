@@ -48,5 +48,8 @@
   "item.tutorialmod.bismuth_leggings": "Bismuth Leggings",
   "item.tutorialmod.bismuth_boots": "Bismuth Boots",
 
-  "item.tutorialmod.bismuth_horse_armor": "Bismuth Horse Armor"
+  "item.tutorialmod.bismuth_horse_armor": "Bismuth Horse Armor",
+
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Trim",
+  "trim_material.tutorialmod.bismuth": "Bismuth Material"
 }
