@@ -6,6 +6,7 @@ import net.termineter.tutorialmod.blocks.ModBlocks;
 import net.termineter.tutorialmod.component.ModDataComponents;
 import net.termineter.tutorialmod.item.ModCreativeModeTabs;
 import net.termineter.tutorialmod.item.ModItems;
+import net.termineter.tutorialmod.util.ModItemProperties;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -84,7 +85,7 @@ public class TutorialMod {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-
+            ModItemProperties.addCustomItemProperties();
         }
     }
 }
