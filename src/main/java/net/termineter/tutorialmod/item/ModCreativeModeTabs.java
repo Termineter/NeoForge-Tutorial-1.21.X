@@ -45,6 +45,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BISMUTH_HORSE_ARMOR);
 
                         output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE);
+
+                        output.accept(ModItems.BIOME_BLADE);
                     })
                     .build());
 

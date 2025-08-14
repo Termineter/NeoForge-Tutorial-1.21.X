@@ -7,10 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.termineter.tutorialmod.TutorialMod;
-import net.termineter.tutorialmod.item.custom.ChiselItem;
-import net.termineter.tutorialmod.item.custom.FuelItem;
-import net.termineter.tutorialmod.item.custom.HammerItem;
-import net.termineter.tutorialmod.item.custom.ModArmorItem;
+import net.termineter.tutorialmod.item.custom.*;
 
 import java.util.List;
 
@@ -81,6 +78,8 @@ public class ModItems {
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen")));
 
 
+    public static final DeferredItem<BiomeBladeItem> BIOME_BLADE = ITEMS.register( "biome_blade", () -> new BiomeBladeItem(ModToolTiers.BIOME,
+            new Item.Properties().attributes(BiomeBladeItem.createAttributes(ModToolTiers.BIOME, 5, -2.4f))));
 
 
 

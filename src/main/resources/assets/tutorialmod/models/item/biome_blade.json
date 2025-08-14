@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "tutorialmod:item/biome_blade"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "tutorialmod:biome": 1
+      },
+      "model": "tutorialmod:item/nether_biome_blade"
+    },
+    {
+      "predicate": {
+        "tutorialmod:biome": 2
+      },
+      "model": "tutorialmod:item/end_biome_blade"
+    }
+  ]
+}
