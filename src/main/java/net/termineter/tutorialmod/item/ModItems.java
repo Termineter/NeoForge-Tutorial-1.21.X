@@ -81,7 +81,7 @@ public class ModItems {
     public static final DeferredItem<BiomeBladeItem> BIOME_BLADE = ITEMS.register( "biome_blade", () -> new BiomeBladeItem(ModToolTiers.BIOME,
             new Item.Properties().attributes(BiomeBladeItem.createAttributes(ModToolTiers.BIOME, 5, -2.4f))));
 
-
+    public static final DeferredItem<WindScepterItem> WIND_SCEPTER = ITEMS.register("wind_scepter", () -> new WindScepterItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -75,6 +75,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
 
         //handheldItem(ModItems.BIOME_BLADE.get());
+
+        handheldItem(ModItems.WIND_SCEPTER.get());
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {

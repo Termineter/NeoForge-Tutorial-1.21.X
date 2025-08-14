@@ -15,7 +15,10 @@ public class ModItemProperties {
 
         ItemProperties.register(ModItems.BIOME_BLADE.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "biome"),
                 (stack, level, entity, seed) -> {
-                    if (stack.get(ModDataComponents.BIOME).is(BiomeTags.IS_NETHER)) {
+                    if (stack.get(ModDataComponents.BIOME) == null) {
+                        return 0f;
+                    }
+                    else if (stack.get(ModDataComponents.BIOME).is(BiomeTags.IS_NETHER)) {
                         return 1.0f;
                     }
                     else if ((stack.get(ModDataComponents.BIOME).is(BiomeTags.IS_END))) {
