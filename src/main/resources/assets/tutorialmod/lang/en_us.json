@@ -53,5 +53,7 @@
   "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Trim",
   "trim_material.tutorialmod.bismuth": "Bismuth Material",
 
-  "item.tutorialmod.biome_blade": "Biome Blade"
+  "item.tutorialmod.biome_blade": "Biome Blade",
+
+  "item.tutorialmod.kaupen_bow": "Kaupen Bow"
 }

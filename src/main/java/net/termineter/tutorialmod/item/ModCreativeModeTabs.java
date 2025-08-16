@@ -48,6 +48,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.BIOME_BLADE);
                         output.accept(ModItems.WIND_SCEPTER);
+
+                        output.accept(ModItems.KAUPEN_BOW);
                     })
                     .build());
 
