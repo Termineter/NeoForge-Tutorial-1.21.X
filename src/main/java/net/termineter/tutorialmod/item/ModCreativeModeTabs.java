@@ -50,6 +50,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WIND_SCEPTER);
 
                         output.accept(ModItems.KAUPEN_BOW);
+
+                        output.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
                     })
                     .build());
 

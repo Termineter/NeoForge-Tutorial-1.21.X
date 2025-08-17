@@ -55,5 +55,8 @@
 
   "item.tutorialmod.biome_blade": "Biome Blade",
 
-  "item.tutorialmod.kaupen_bow": "Kaupen Bow"
+  "item.tutorialmod.kaupen_bow": "Kaupen Bow",
+
+  "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)"
 }

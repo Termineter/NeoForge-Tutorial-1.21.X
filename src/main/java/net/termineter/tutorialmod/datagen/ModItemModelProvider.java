@@ -77,6 +77,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //handheldItem(ModItems.BIOME_BLADE.get());
 
         handheldItem(ModItems.WIND_SCEPTER.get());
+
+        handheldItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
