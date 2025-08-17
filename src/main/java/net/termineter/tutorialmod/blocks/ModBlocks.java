@@ -15,6 +15,7 @@ import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.blocks.custom.BismuthLampBlock;
 import net.termineter.tutorialmod.blocks.custom.MagicBlock;
 import net.termineter.tutorialmod.item.ModItems;
+import net.termineter.tutorialmod.sound.ModSounds;
 
 import java.util.function.Supplier;
 
@@ -36,7 +37,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of()
-                    .strength(2f).requiresCorrectToolForDrops()));
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final DeferredBlock<StairBlock> BISMUTH_STAIRS = registerBlock("bismuth_stairs",
             () -> new StairBlock(ModBlocks.BISMUTH_BLOCK.get().defaultBlockState(),
