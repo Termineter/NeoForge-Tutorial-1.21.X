@@ -58,5 +58,7 @@
   "item.tutorialmod.kaupen_bow": "Kaupen Bow",
 
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
-  "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)"
+  "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "effect.tutorialmod.slimey": "Slimey"
 }

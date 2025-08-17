@@ -4,6 +4,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.termineter.tutorialmod.blocks.ModBlocks;
 import net.termineter.tutorialmod.component.ModDataComponents;
+import net.termineter.tutorialmod.effect.ModEffects;
 import net.termineter.tutorialmod.item.ModCreativeModeTabs;
 import net.termineter.tutorialmod.item.ModItems;
 import net.termineter.tutorialmod.sound.ModSounds;
@@ -52,6 +53,8 @@ public class TutorialMod {
         ModDataComponents.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
