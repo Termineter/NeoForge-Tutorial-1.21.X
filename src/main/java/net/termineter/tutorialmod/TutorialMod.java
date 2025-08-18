@@ -7,6 +7,7 @@ import net.termineter.tutorialmod.component.ModDataComponents;
 import net.termineter.tutorialmod.effect.ModEffects;
 import net.termineter.tutorialmod.item.ModCreativeModeTabs;
 import net.termineter.tutorialmod.item.ModItems;
+import net.termineter.tutorialmod.potion.ModPotions;
 import net.termineter.tutorialmod.sound.ModSounds;
 import net.termineter.tutorialmod.util.ModItemProperties;
 import org.slf4j.Logger;
@@ -55,6 +56,7 @@ public class TutorialMod {
         ModSounds.register(modEventBus);
 
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
