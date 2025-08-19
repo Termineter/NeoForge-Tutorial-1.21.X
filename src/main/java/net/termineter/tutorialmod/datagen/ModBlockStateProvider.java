@@ -3,6 +3,7 @@ package net.termineter.tutorialmod.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
@@ -12,6 +13,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.blocks.ModBlocks;
 import net.termineter.tutorialmod.blocks.custom.BismuthLampBlock;
+import net.termineter.tutorialmod.blocks.custom.GojiBerryBushBlock;
 import net.termineter.tutorialmod.blocks.custom.RadishCropBlock;
 
 import java.util.function.Function;
@@ -52,6 +54,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLamp();
 
         makeCrop(((CropBlock) ModBlocks.RADISH_CROP.get()), "radish_crop_stage", "radish_crop_stage");
+        makeBush(((SweetBerryBushBlock) ModBlocks.GOJI_BERRY_BUSH.get()), "goji_berry_bush_stage", "goji_berry_bush_stage");
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
@@ -94,4 +97,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         return models;
     }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(GojiBerryBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + textureName + state.getValue(GojiBerryBushBlock.AGE))).renderType("cutout"));
+
+        return models;
+    }
+
 }

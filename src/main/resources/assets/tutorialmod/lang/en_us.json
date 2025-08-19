@@ -76,5 +76,8 @@
   "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
 
   "item.tutorialmod.radish_seeds": "Radish Seeds",
-  "block.tutorialmod.radish_crop": "Radish Crop"
+  "block.tutorialmod.radish_crop": "Radish Crop",
+
+  "block.tutorialmod.goji_berry_bush": "Goji Berry Bush",
+  "item.tutorialmod.goji_berries": "Goji Berry"
 }

@@ -13,6 +13,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.blocks.custom.BismuthLampBlock;
+import net.termineter.tutorialmod.blocks.custom.GojiBerryBushBlock;
 import net.termineter.tutorialmod.blocks.custom.MagicBlock;
 import net.termineter.tutorialmod.blocks.custom.RadishCropBlock;
 import net.termineter.tutorialmod.item.ModItems;
@@ -71,6 +72,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> RADISH_CROP = BLOCKS.register("radish_crop",
             () -> new RadishCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEETROOTS)));
+
+    public static final DeferredBlock<Block> GOJI_BERRY_BUSH = BLOCKS.register("goji_berry_bush",
+            () -> new GojiBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
