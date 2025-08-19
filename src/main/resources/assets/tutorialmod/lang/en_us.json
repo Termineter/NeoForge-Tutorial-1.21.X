@@ -73,5 +73,8 @@
   "painting.tutorialmod.saw_them.title": "Saw Them",
   "painting.tutorialmod.saw_them.author": "NanoAttack",
 
-  "enchantment.tutorialmod.lightning_striker": "Lightning Striker"
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
+
+  "item.tutorialmod.radish_seeds": "Radish Seeds",
+  "block.tutorialmod.radish_crop": "Radish Crop"
 }
