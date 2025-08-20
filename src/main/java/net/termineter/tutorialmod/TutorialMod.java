@@ -1,11 +1,15 @@
 package net.termineter.tutorialmod;
 
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.termineter.tutorialmod.blocks.ModBlocks;
 import net.termineter.tutorialmod.component.ModDataComponents;
 import net.termineter.tutorialmod.effect.ModEffects;
 import net.termineter.tutorialmod.enchantment.ModEnchantmentEffects;
+import net.termineter.tutorialmod.entity.ModEntities;
+import net.termineter.tutorialmod.entity.client.GeckoRenderer;
 import net.termineter.tutorialmod.item.ModCreativeModeTabs;
 import net.termineter.tutorialmod.item.ModItems;
 import net.termineter.tutorialmod.potion.ModPotions;
@@ -60,6 +64,7 @@ public class TutorialMod {
         ModPotions.register(modEventBus);
 
         ModEnchantmentEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -96,7 +101,9 @@ public class TutorialMod {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
+
             ModItemProperties.addCustomItemProperties();
+            EntityRenderers.register(ModEntities.GECKO.get(), GeckoRenderer::new);
         }
     }
 }
