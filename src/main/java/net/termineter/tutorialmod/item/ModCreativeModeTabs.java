@@ -78,6 +78,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BISMUTH_WALL);
 
                         output.accept(ModBlocks.BISMUTH_LAMP);
+
+                        output.accept(ModBlocks.BISMUTH_NETHER_ORE);
+                        output.accept(ModBlocks.BISMUTH_END_ORE);
                     })
                     .build());
 
