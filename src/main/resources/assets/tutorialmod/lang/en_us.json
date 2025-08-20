@@ -82,5 +82,14 @@
   "item.tutorialmod.goji_berries": "Goji Berry",
 
   "block.tutorialmod.bismuth_end_ore": "Bismuth End Ore",
-  "block.tutorialmod.bismuth_nether_ore": "Bismuth Nether Ore"
+  "block.tutorialmod.bismuth_nether_ore": "Bismuth Nether Ore",
+
+  "block.tutorialmod.bloodwood_log": "Bloodwood Log",
+  "block.tutorialmod.bloodwood_planks": "Bloodwood Planks",
+  "block.tutorialmod.bloodwood_wood": "Bloodwood Wood",
+  "block.tutorialmod.stripped_bloodwood_log": "Stripped Bloodwood Log",
+  "block.tutorialmod.stripped_bloodwood_wood": "Stripped Bloodwood Wood",
+  "block.tutorialmod.bloodwood_leaves": "Bloodwood Leaves",
+
+  "block.tutorialmod.bloodwood_sapling": "Bloodwood Sapling"
 }

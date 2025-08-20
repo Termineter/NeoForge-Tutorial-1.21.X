@@ -86,6 +86,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.BISMUTH_END_ORE.get(), ModItems.RAW_BISMUTH.get(), 3, 6));
         add(ModBlocks.BISMUTH_NETHER_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.BISMUTH_NETHER_ORE.get(), ModItems.RAW_BISMUTH.get(), 4, 8));
+
+        this.dropSelf(ModBlocks.BLOODWOOD_LOG.get());
+        this.dropSelf(ModBlocks.BLOODWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLOODWOOD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.BLOODWOOD_PLANKS.get());
+        this.dropSelf(ModBlocks.BLOODWOOD_SAPLING.get());
+
+        this.add(ModBlocks.BLOODWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLOODWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
