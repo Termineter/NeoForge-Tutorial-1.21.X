@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.PotionBrewEvent;
@@ -81,15 +82,20 @@ public class ModEvents {
 
             if (boosterTicks > 0) {
                 double boosterDirectionX = player.getPersistentData().getDouble("boosterDirectionX");
-                double boosterDirectionY = player.getPersistentData().getDouble("boosterDirectionY");
+                double boosterDirectionY = player.getPersistentData().getDouble("boosterDirectionY") * 0.5;
                 double boosterDirectionZ = player.getPersistentData().getDouble("boosterDirectionZ");
 
-                double boost = (double)boosterTicks / 5;
+                double boost = (double)boosterTicks / 30;
+                Vec3 boostVector = new Vec3(boosterDirectionX*boost, boosterDirectionY*boost, boosterDirectionZ*boost);
 
-                player.setDeltaMovement(boosterDirectionX*boost, boosterDirectionY*boost, boosterDirectionZ*boost);
+                player.push(boostVector.normalize());
                 player.hurtMarked = true;
+                player.fallDistance = 0.0F;
 
                 player.getPersistentData().putInt("boosterTicks", --boosterTicks);
+
+                if (player.horizontalCollision)
+                    player.getPersistentData().putInt("boosterTicks", 0);
             }
         }
     }

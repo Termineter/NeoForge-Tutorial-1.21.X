@@ -44,7 +44,7 @@ public class BoosterItem extends Item {
         if (!level.isClientSide) {
             if (livingEntity instanceof Player player) {
                 Vec3 lookDirection = player.getLookAngle().normalize();
-                player.getPersistentData().putInt("boosterTicks", 60);
+                player.getPersistentData().putInt("boosterTicks", this.getUseDuration(stack, player) - timeCharged);
                 player.getPersistentData().putDouble("boosterDirectionX", lookDirection.x);
                 player.getPersistentData().putDouble("boosterDirectionY", lookDirection.y);
                 player.getPersistentData().putDouble("boosterDirectionZ", lookDirection.z);
