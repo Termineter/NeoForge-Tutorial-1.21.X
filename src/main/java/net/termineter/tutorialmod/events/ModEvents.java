@@ -17,6 +17,7 @@ import net.neoforged.neoforge.event.brewing.PotionBrewEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.item.custom.HammerItem;
 import net.termineter.tutorialmod.potion.ModPotions;
@@ -70,6 +71,27 @@ public class ModEvents {
         PotionBrewing.Builder builder = event.getBuilder();
 
         builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION);
+    }
+
+    @SubscribeEvent
+    public static void onBoosterPlayerTick(PlayerTickEvent.Post event) {
+
+        if (!event.getEntity().level().isClientSide && event.getEntity() instanceof Player player) {
+            int boosterTicks = player.getPersistentData().getInt("boosterTicks");
+
+            if (boosterTicks > 0) {
+                double boosterDirectionX = player.getPersistentData().getDouble("boosterDirectionX");
+                double boosterDirectionY = player.getPersistentData().getDouble("boosterDirectionY");
+                double boosterDirectionZ = player.getPersistentData().getDouble("boosterDirectionZ");
+
+                double boost = (double)boosterTicks / 5;
+
+                player.setDeltaMovement(boosterDirectionX*boost, boosterDirectionY*boost, boosterDirectionZ*boost);
+                player.hurtMarked = true;
+
+                player.getPersistentData().putInt("boosterTicks", --boosterTicks);
+            }
+        }
     }
 
 }

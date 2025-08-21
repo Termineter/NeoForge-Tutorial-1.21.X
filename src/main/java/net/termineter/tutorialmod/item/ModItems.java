@@ -103,6 +103,9 @@ public class ModItems {
             () -> new DeferredSpawnEggItem(ModEntities.GECKO, 0x31afaf, 0xffac00,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> BOOSTER = ITEMS.register("booster",
+            () -> new BoosterItem(new Item.Properties().stacksTo(1)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

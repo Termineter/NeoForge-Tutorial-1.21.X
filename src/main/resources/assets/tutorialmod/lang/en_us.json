@@ -95,5 +95,7 @@
 
   "item.tutorialmod.gecko_spawn_egg": "Gecko SPawn Egg",
 
-  "entity.mccourse.gecko": "Gecko"
+  "entity.mccourse.gecko": "Gecko",
+
+  "item.tutorialmod.booster": "Booster"
 }
