@@ -97,5 +97,9 @@
 
   "entity.mccourse.gecko": "Gecko",
 
-  "item.tutorialmod.booster": "Booster"
+  "item.tutorialmod.booster": "Booster",
+
+  "entity.mccourse.tomahawk": "Tomahawk",
+
+  "item.tutorialmod.tomahawk": "Tomahawk"
 }

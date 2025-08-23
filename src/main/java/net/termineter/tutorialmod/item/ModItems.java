@@ -106,6 +106,9 @@ public class ModItems {
     public static final DeferredItem<Item> BOOSTER = ITEMS.register("booster",
             () -> new BoosterItem(new Item.Properties().stacksTo(1)));
 
+    public static final DeferredItem<Item> TOMAHAWK = ITEMS.register("tomahawk",
+            () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

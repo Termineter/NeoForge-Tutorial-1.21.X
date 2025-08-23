@@ -13,6 +13,7 @@ import net.termineter.tutorialmod.TutorialMod;
 import net.termineter.tutorialmod.entity.ModEntities;
 import net.termineter.tutorialmod.entity.client.GeckoAnimations;
 import net.termineter.tutorialmod.entity.client.GeckoModel;
+import net.termineter.tutorialmod.entity.client.TomahawkProjectileModel;
 import net.termineter.tutorialmod.entity.custom.GeckoEntity;
 
 @EventBusSubscriber(modid = TutorialMod.MOD_ID)
@@ -21,6 +22,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(GeckoModel.LAYER_LOCATION, GeckoModel::createBodyLayer);
+        event.registerLayerDefinition(TomahawkProjectileModel.LAYER_LOCATION, TomahawkProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent

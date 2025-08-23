@@ -60,6 +60,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GECKO_SPAWN_EGG);
 
                         output.accept(ModItems.BOOSTER);
+
+                        output.accept(ModItems.TOMAHAWK);
                     })
                     .build());
 
