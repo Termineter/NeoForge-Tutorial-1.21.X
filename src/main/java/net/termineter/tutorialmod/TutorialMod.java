@@ -9,6 +9,7 @@ import net.termineter.tutorialmod.component.ModDataComponents;
 import net.termineter.tutorialmod.effect.ModEffects;
 import net.termineter.tutorialmod.enchantment.ModEnchantmentEffects;
 import net.termineter.tutorialmod.entity.ModEntities;
+import net.termineter.tutorialmod.entity.client.ChairRenderer;
 import net.termineter.tutorialmod.entity.client.GeckoRenderer;
 import net.termineter.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.termineter.tutorialmod.item.ModCreativeModeTabs;
@@ -106,6 +107,8 @@ public class TutorialMod {
             ModItemProperties.addCustomItemProperties();
             EntityRenderers.register(ModEntities.GECKO.get(), GeckoRenderer::new);
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+
+            EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
         }
     }
 }
