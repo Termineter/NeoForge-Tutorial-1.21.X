@@ -2,13 +2,17 @@ package net.termineter.tutorialmod.entity.custom;
 
 import net.minecraft.Util;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializer;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -29,6 +33,8 @@ public class GeckoEntity extends Animal {
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    private final ServerBossEvent bossEvent = new ServerBossEvent(Component.literal("Our mighty Gecko"), BossEvent.BossBarColor.GREEN, BossEvent.BossBarOverlay.NOTCHED_10);
 
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(GeckoEntity.class, EntityDataSerializers.INT);
@@ -146,5 +152,21 @@ public class GeckoEntity extends Animal {
         return SoundEvents.BAT_DEATH;
     }
 
+    @Override
+    public void startSeenByPlayer(ServerPlayer serverPlayer) {
+        super.startSeenByPlayer(serverPlayer);
+        this.bossEvent.addPlayer(serverPlayer);
+    }
 
+    @Override
+    public void stopSeenByPlayer(ServerPlayer serverPlayer) {
+        super.stopSeenByPlayer(serverPlayer);
+        this.bossEvent.removePlayer(serverPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
+    }
 }
