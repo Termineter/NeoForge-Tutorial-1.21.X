@@ -97,6 +97,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOODWOOD_SAPLING.get());
 
                         output.accept(ModBlocks.BLOODWOOD_LEAVES.get());
+
+                        output.accept(ModBlocks.CHAIR.get());
                     })
                     .build());
 
