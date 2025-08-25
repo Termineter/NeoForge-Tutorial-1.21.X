@@ -17,6 +17,7 @@ import net.termineter.tutorialmod.item.ModItems;
 import net.termineter.tutorialmod.potion.ModPotions;
 import net.termineter.tutorialmod.sound.ModSounds;
 import net.termineter.tutorialmod.util.ModItemProperties;
+import net.termineter.tutorialmod.villager.ModVillagers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -67,6 +68,8 @@ public class TutorialMod {
 
         ModEnchantmentEffects.register(modEventBus);
         ModEntities.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
