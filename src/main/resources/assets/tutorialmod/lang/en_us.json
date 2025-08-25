@@ -101,5 +101,7 @@
 
   "entity.mccourse.tomahawk": "Tomahawk",
 
-  "item.tutorialmod.tomahawk": "Tomahawk"
+  "item.tutorialmod.tomahawk": "Tomahawk",
+
+  "item.tutorialmod.radiation_staff": "Radiation Staff"
 }
