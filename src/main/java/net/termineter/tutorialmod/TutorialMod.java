@@ -15,6 +15,7 @@ import net.termineter.tutorialmod.entity.client.GeckoRenderer;
 import net.termineter.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.termineter.tutorialmod.item.ModCreativeModeTabs;
 import net.termineter.tutorialmod.item.ModItems;
+import net.termineter.tutorialmod.loot.ModLootModifiers;
 import net.termineter.tutorialmod.particle.BismuthParticles;
 import net.termineter.tutorialmod.particle.ModParticles;
 import net.termineter.tutorialmod.potion.ModPotions;
@@ -75,6 +76,8 @@ public class TutorialMod {
         ModVillagers.register(modEventBus);
 
         ModParticles.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
