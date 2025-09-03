@@ -62,6 +62,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BOOSTER);
 
                         output.accept(ModItems.TOMAHAWK);
+
+                        output.accept(ModBlocks.PEDESTAL);
                     })
                     .build());
 

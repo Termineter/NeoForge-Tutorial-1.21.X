@@ -6,6 +6,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.termineter.tutorialmod.blocks.ModBlocks;
+import net.termineter.tutorialmod.blocks.entity.ModBlockEntities;
 import net.termineter.tutorialmod.component.ModDataComponents;
 import net.termineter.tutorialmod.effect.ModEffects;
 import net.termineter.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -78,6 +79,8 @@ public class TutorialMod {
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
