@@ -4,9 +4,11 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.termineter.tutorialmod.blocks.ModBlocks;
 import net.termineter.tutorialmod.blocks.entity.ModBlockEntities;
+import net.termineter.tutorialmod.blocks.entity.renderer.PedestalBlockEntityRenderer;
 import net.termineter.tutorialmod.component.ModDataComponents;
 import net.termineter.tutorialmod.effect.ModEffects;
 import net.termineter.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -128,6 +130,11 @@ public class TutorialMod {
         @SubscribeEvent
         public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.BISMUTH_PARTICLES.get(), BismuthParticles.Provider::new);
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }
